@@ -1,0 +1,24 @@
+image: "ruby:2.4.0"
+
+services:
+  - mysql:latest
+
+variables:
+  MYSQL_DATABASE: ostinato_test
+
+before_script:
+  - apt-get update -qq 
+  - apt-get -yqq install nodejs
+  - ruby -v
+  - gem install bundler --no-ri --no-rdoc
+  - bundle install --jobs $(nproc)  "${FLAGS[@]}"
+  - RAILS_ENV=test bundle exec rake db:setup
+  - RAILS_ENV=test bundle exec rake db:migrate
+
+rspec:
+  script:
+    - bundle exec rspec
+
+rubocop:
+  script:
+    - bundle exec rubocop
