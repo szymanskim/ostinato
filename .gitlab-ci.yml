@@ -1,10 +1,10 @@
 image: "ruby:2.4.0"
 
 services:
-  - mysql:latest
+  - postgres:9.5
 
 variables:
-  MYSQL_DATABASE: ostinato_test
+  POSTGRES_DB: ostinato_test
 
 before_script:
   - apt-get update -qq 
@@ -12,7 +12,8 @@ before_script:
   - ruby -v
   - gem install bundler --no-ri --no-rdoc
   - cd rails/ostinato
-  - bundle install
+  - bundle install -j $(nproc)
+  - cp config/database.yml.gitlab config/database.yml
   - RAILS_ENV=test bundle exec rake db:setup
   - RAILS_ENV=test bundle exec rake db:migrate
 
