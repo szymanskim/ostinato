@@ -11,6 +11,8 @@ before_script:
   - apt-get -yqq install nodejs
   - ruby -v
   - gem install bundler --no-ri --no-rdoc
+  - ls
+  - pwd
   - bundle install
   - RAILS_ENV=test bundle exec rake db:setup
   - RAILS_ENV=test bundle exec rake db:migrate
