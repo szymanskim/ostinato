@@ -1,0 +1,19 @@
+en:
+  views:
+    show: Show
+    edit: Edit
+    destroy: Delete
+    are_you_sure: Are you sure?
+    back: Back
+    edit: Edit
+    example:
+      index:
+        title: List of all examples
+        new_example: New example
+      edit:
+        title: Edit Example
+      new:
+        title: New example
+      flash_messages:
+        example_was_successfully_created: 'Example was successfully created.'
+        example_was_successfully_updated: 'Example was successfully updated.'

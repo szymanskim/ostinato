@@ -1,0 +1,19 @@
+pl:
+  views:
+    show: Pokaż
+    edit: Edytuj
+    destroy: Usuń
+    are_you_sure: Jesteś pewny?
+    back: Powrót
+    edit: Edytuj
+    example:
+      index:
+        title: Lista przykładów
+        new_example: Nowy przykład
+      edit:
+        title: Edycja przykładu
+      new:
+        title: Nowy przykład
+      flash_messages:
+        example_was_successfully_created: 'Przykład został pomyślnie dodany.'
+        example_was_successfully_updated: 'Przykład został pomyślnie zaktualizowany.'

@@ -1,0 +1,27 @@
+<%= form_for(@example) do |f| %>
+  <% if @example.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= t 'activerecord.errors.template.header', :model => Example.model_name.human, :count => @example.errors.count %></h2>
+
+      <ul>
+      <% @example.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

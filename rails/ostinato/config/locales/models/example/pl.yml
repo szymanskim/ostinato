@@ -1,0 +1,8 @@
+pl:
+  activerecord:
+    models:
+      example: 'Przykład'
+    attributes:
+      product:
+        name: 'Nazwa'
+        description: 'Opis'

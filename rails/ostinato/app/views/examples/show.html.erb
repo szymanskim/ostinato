@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b><%= Example.human_attribute_name(:name) %>:</b>
+  <%= @example.name %>
+</p>
+
+<p>
+  <b><%= Example.human_attribute_name(:description) %>:</b>
+  <%= @example.description %>
+</p>
+
+<%= link_to I18n.t('views.edit'), edit_example_path(@example) %> |
+<%= link_to I18n.t('views.back'), examples_path %>
