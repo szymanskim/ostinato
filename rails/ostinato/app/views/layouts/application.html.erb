@@ -6,9 +6,27 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      body {font-family: "Lato", sans-serif}
+      .flag 
+    </style>
   </head>
 
   <body>
+    <div class="w3-top">
+      <div class="w3-top">
+        <img src="/assets/note.jpg" alt="Note" style="width:60px;height:40px; ">
+        <b>Ostinato</b>
+        <img src="/assets/flag.png" alt="flag" style="width:50px;height:30px;" class="w3-center">
+        <%= link_to_unless I18n.locale == :pl, "PL", locale: :pl %>
+        <%= link_to_unless I18n.locale == :en, "EN", locale: :en %>
+        
+
     <%= yield %>
   </body>
 </html>
