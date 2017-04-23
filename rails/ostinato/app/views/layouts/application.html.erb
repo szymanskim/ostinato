@@ -10,9 +10,6 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/style.css">
 </head>
 
@@ -22,26 +19,36 @@
             <div class="row vertical-align">
                 <div class="col-xs-4 vertical-align paddingRemove">
                     <div class="col-xs-5 logoWrapper">
-                        <!-- <img class="logo img-responsive" src=src="/assets/note.jpg" alt="logo"> -->
+                        <%= link_to (image_tag("logo.jpg", class: "logo img-responsive")), {:controller => "pages", :action => "show", :page => "home"} %>
                     </div>
                     <div class="col-xs-7">
-                        <a href="#"><h3 class="text-uppercase text-underline"><u>Ostinato</u></h3>
+                        <%= link_to :controller => "pages", :action => "show", :page => "home" do %>
+                        <h3 class="text-uppercase text-underline"><u>Ostinato</u></h3>
                         <h3>Wrocławski Zespół Kameralny</h3></a>
+                         <% end %>
                     </div>
                 </div>
                 <div class="col-xs-4 vertical-align paddingRemove">
                     <div class="language vertical-align">
-<!--                         <img src="/assets/flag.png" alt="logo">
- -->                       <%= link_to_unless I18n.locale == :pl, "PL", locale: :pl %>
-                       <%= link_to_unless I18n.locale == :en, "EN", locale: :en %>
+                        <%= image_tag("flag.png", height: '42', width: '42') %>
+                        <%= link_to_unless I18n.locale == :pl, "PL", locale: :pl %>
+                        <%= link_to_unless I18n.locale == :en, "EN", locale: :en %>
                     </div>
                 </div>
-
-                <%= yield %>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="/assets/javascripts/session.js"></script>
+                    <div class="col-xs-4 logReg">
+                    <div class="col-xs-12 col-sm-5">
+                        <%= link_to I18n.t('login'), {:controller => "pages", :action => "show", :page => "login" } %>
+                    </div>
+                    <div class="col-xs-12 col-sm-5">
+                        <%= link_to I18n.t('registration'), {:controller => "pages", :action => "show", :page => "login" } %>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    
+    <%= yield %>
+    <script src="/assets/javascripts/changeView.js"></script>
 </body>
 
 </html>
