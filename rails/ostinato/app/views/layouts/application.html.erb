@@ -1,32 +1,48 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Ostinato</title>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tytuł</title>
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-      body {font-family: "Lato", sans-serif}
-      .flag 
-    </style>
-  </head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/style.css">
+</head>
 
-  <body>
-    <div class="w3-top">
-      <div class="w3-top">
-        <img src="/assets/note.jpg" alt="Note" style="width:60px;height:40px; ">
-        <b>Ostinato</b>
-        <img src="/assets/flag.png" alt="flag" style="width:50px;height:30px;" class="w3-center">
-        <%= link_to_unless I18n.locale == :pl, "PL", locale: :pl %>
-        <%= link_to_unless I18n.locale == :en, "EN", locale: :en %>
-        
+<body>
+    <div class="container-fluid main">
+        <header>
+            <div class="row vertical-align">
+                <div class="col-xs-4 vertical-align paddingRemove">
+                    <div class="col-xs-5 logoWrapper">
+                        <img class="logo img-responsive" src=src="/assets/note.jpg" alt="logo">
+                    </div>
+                    <div class="col-xs-7">
+                        <a href="index.html"><h3 class="text-uppercase text-underline"><u>Ostinato</u></h3>
+                        <h3>Wrocławski Zespół Kameralny</h3></a>
+                    </div>
+                </div>
+                <div class="col-xs-4 vertical-align paddingRemove">
+                    <div class="language vertical-align">
+                        <img src="/assets/flag.png" alt="logo">
+                       <%= link_to_unless I18n.locale == :pl, "PL", locale: :pl %>
+                       <%= link_to_unless I18n.locale == :en, "EN", locale: :en %>
+                    </div>
+                </div>
 
-    <%= yield %>
-  </body>
+                <%= yield %>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="/assets/javascripts/session.js"></script>
+</body>
+
 </html>
+

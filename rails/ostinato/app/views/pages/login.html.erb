@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tytuł</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/style.css">
+</head>
+
+<body>
+    <div class="container-fluid main">
+        <header>
+            <div class="row vertical-align">
+                <div class="col-xs-4 vertical-align paddingRemove">
+                    <div class="col-xs-5 logoWrapper">
+                        <img class="logo img-responsive" src="http://placehold.it/200x200" alt="logo">
+                    </div>
+                    <div class="col-xs-7">
+                        <a href="index.html"><h3 class="text-uppercase text-underline"><u>Ostinato</u></h3>
+                        <h3>Wrocławski Zespół Kameralny</h3></a>
+                    </div>
+                </div>
+                <div class="col-xs-4 vertical-align paddingRemove">
+                    <div class="language vertical-align">
+                        <img src="http://placehold.it/30x30" alt="logo">
+                        <span><span id="pl">PL</span> / <span id="en">EN</span></span>
+                    </div>
+                </div>
+                <div class="col-xs-4 logReg">
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Aktualności</a></li>
+                    <li><a href="#">O nas</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <main>
+        <div class="formWrapper">
+            <div class="row">
+                <div class="col-xs-10 col-sm-5 col-md-3 content paddingRemove">
+                    <div class="col-xs-6 info">
+                        <h5 class="toLogin">Zaloguj się</h5>
+                    </div>
+                    <div class="col-xs-6 info">
+                        <h5 class="toRegister">Zarejestruj się</h5>
+                    </div>
+                    <div class="loginWrapper">
+                        <form>
+                            <div class="form-group">
+                                <label for="email">Login albo adres Email</label>
+                                <input type="text" class="form-control" id="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Hasło</label>
+                                <input type="password" class="form-control" id="password">
+                            </div>
+                            <div class="col-xs-6">
+
+                                <div class="checkbox">
+                                    <label>
+                              <input type="checkbox"> Zapamiętaj mnie
+                            </label>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <a class="forgotPassword" href="#">Zapomniałeś hasła?</a>
+                            </div>
+                            <div class="col-xs-12">
+                                <button type="submit" class="btn btn-default">Zaloguj się</button>
+                            </div>
+                            <div class="col-sm-8 col-xs-12 vertical-align extra">
+                                <span>Zaloguj się przez: </span>
+                                <a href="#"><i class="fa fa-google-plus-square fa-3x" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row">
+
+                        <div class="registerWrapper">
+                            <form>
+                                <div class="form-group">
+                                    <label for="surname">Nazwisko</label>
+                                    <input type="text" class="form-control" id="surname">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" id="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="reEmail">Powtórz email</label>
+                                    <input type="email" class="form-control" id="reEmail">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Hasło</label>
+                                    <input type="password" class="form-control" id="password">
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="checkbox">
+                                        <label>
+                                      <input type="checkbox">Akceptuję regulamin
+                                    </label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <button type="submit" class="btn btn-default">Zarejestruj się</button>
+                                </div>
+                                <div class="col-sm-8 col-xs-12 vertical-align extra">
+                                    <span>Zaloguj się przez: </span>
+                                    <a href="#"><i class="fa fa-google-plus-square fa-3x" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    </div>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="/assets/javascripts/changeView.js"></script>
+</body>
+
+</html>
