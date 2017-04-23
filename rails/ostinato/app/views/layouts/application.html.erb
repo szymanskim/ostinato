@@ -4,49 +4,68 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tytuł</title>
+    <title>Ostinato</title>
 
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" href="/assets/stylesheets/style.css">
 </head>
 
 <body>
-    <div class="container-fluid main">
         <header>
-            <div class="row vertical-align">
-                <div class="col-xs-4 vertical-align paddingRemove">
-                    <div class="col-xs-5 logoWrapper">
-                        <%= link_to (image_tag("logo.jpg", class: "logo img-responsive")), {:controller => "pages", :action => "show", :page => "home"} %>
-                    </div>
-                    <div class="col-xs-7">
+            <div class="row" id="main-nav">
+                <div class="col-md-4 vertical-align paddingRemove">
+                        <%= link_to (image_tag("logo.png", class: "logo img-responsive", width:"140", height:"100")), {:controller => "pages", :action => "show", :page => "home"} %>
+                    <div class="col-md-8">
                         <%= link_to :controller => "pages", :action => "show", :page => "home" do %>
-                        <h3 class="text-uppercase text-underline"><u>Ostinato</u></h3>
-                        <h3>Wrocławski Zespół Kameralny</h3></a>
-                         <% end %>
+                            <h3 class="text-uppercase text-underline"><u>Ostinato</u></h3>
+                            <h5> <%= I18n.t('title') %></h5>
+                        <% end %>
                     </div>
                 </div>
-                <div class="col-xs-4 vertical-align paddingRemove">
-                    <div class="language vertical-align">
-                        <%= image_tag("flag.png", height: '42', width: '42') %>
+                <div class="col-md-4" align="center">
+                    <div class="language" align="center">
+                        <%= image_tag("flag.png", class: "logo img-responsive", height: '60', width: '60') %>
                         <%= link_to_unless I18n.locale == :pl, "PL", locale: :pl %>
                         <%= link_to_unless I18n.locale == :en, "EN", locale: :en %>
                     </div>
                 </div>
-                    <div class="col-xs-4 logReg">
-                    <div class="col-xs-12 col-sm-5">
+                <div class="col-md-4 logReg">
+                    <div class="col-md-5">
                         <%= link_to I18n.t('login'), {:controller => "pages", :action => "show", :page => "login" } %>
                     </div>
-                    <div class="col-xs-12 col-sm-5">
+                    <div class="col-md-5">
                         <%= link_to I18n.t('registration'), {:controller => "pages", :action => "show", :page => "login" } %>
                     </div>
                 </div>
             </div>
         </header>
-    </div>
+
     
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="nav navbar-nav">
+                    <li><a href="#"><%= I18n.t('news') %></a></li>
+                    <li><a href="#"><%= I18n.t('about') %></a></li>
+                    <li><a href="#"><%= I18n.t('contact') %></a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </nav>
     <%= yield %>
     <script src="/assets/javascripts/changeView.js"></script>
 </body>
