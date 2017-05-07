@@ -1,4 +1,4 @@
-   <main>
+ <main>
         <div class="formWrapper">
             <div class="row">
                 <div class="col-xs-10 col-sm-5 col-md-3 content paddingRemove"">
@@ -19,7 +19,6 @@
                                 <input type="password" class="form-control" id="password">
                             </div>
                             <div class="col-xs-6">
-
                                 <div class="checkbox">
                                     <label>
                               <input type="checkbox"> Zapamiętaj mnie
@@ -40,7 +39,6 @@
                         </form>
                     </div>
                     <div class="row">
-
                         <div class="registerWrapper">
                             <form>
                                 <div class="form-group">
@@ -76,9 +74,50 @@
                                 </div>
                             </form>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
+        
+        <script>
+        var toLogin = document.querySelector(".toLogin");
+        var toRegister = document.querySelector(".toRegister");
+        var loginForm = document.querySelector(".loginWrapper");
+        var registerForm = document.querySelector(".registerWrapper");
+        var getUrlParameter = function getUrlParameter(sParam) {
+            var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
+
+            for (i = 0; i < sURLVariables.length; i++) {
+                sParameterName = sURLVariables[i].split('=');
+
+                if (sParameterName[0] === sParam) {
+                    return sParameterName[1] === undefined ? true : sParameterName[1];
+                }
+            }
+        };
+        var toggleView = function() {
+            var isSignIn = getUrlParameter('isSignIn');
+            if (isSignIn=='true') {
+                registerForm.style.display = "none";
+                loginForm.style.display = "block";
+            }else{
+                loginForm.style.display = "none";
+                registerForm.style.display = "block";
+            }
+        };
+        if(toRegister){
+        toRegister.addEventListener("click", function() {
+            loginForm.style.display = "none";
+            registerForm.style.display = "block";
+        })};
+        if(toLogin){
+        toLogin.addEventListener("click", function() {
+            registerForm.style.display = "none";
+            loginForm.style.display = "block";
+        })};
+        toggleView();
+        </script>
     </main>
