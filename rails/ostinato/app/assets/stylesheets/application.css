@@ -13,13 +13,16 @@
  *= require_tree .
  *= require_self
  */
+h1{
+  font-size: 32px !important;
+}
 
 #main-nav {
     background: #edabab;
 }
 
 body {
-    min-width: 300px;
+    min-width: 330px;
 }
 
 body .row{
