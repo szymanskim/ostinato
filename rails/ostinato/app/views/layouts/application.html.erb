@@ -1,32 +1,77 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ostinato</title>
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-      body {font-family: "Lato", sans-serif}
-      .flag 
-    </style>
-  </head>
+</head>
 
-  <body>
-    <div class="w3-top">
-      <div class="w3-top">
-        <img src="/assets/note.jpg" alt="Note" style="width:60px;height:40px; ">
-        <b>Ostinato</b>
-        <img src="/assets/flag.png" alt="flag" style="width:50px;height:30px;" class="w3-center">
-        <%= link_to_unless I18n.locale == :pl, "PL", locale: :pl %>
-        <%= link_to_unless I18n.locale == :en, "EN", locale: :en %>
-        
+<body>
+        <header>
+            <div class="row" id="main-nav">
+                <div class="col-md-4 vertical-align paddingRemove">
+                        <%= link_to (image_tag("logo.png", class: "logo img-responsive", width:"100", height:"50")), {:controller => "pages", :action => "show", :page => "home"} %>
+                    <div class="col-md-8 vertical-align" align="left">
+                        <div class="col-md-6 vertical-align" align="left">
+                            <%= link_to :controller => "pages", :action => "show", :page => "home" do %>
+                                <h1><span class="label label-danger">Ostinato</span></h1>
+                            <% end %>
+                        </div>
+                        <div class="col-md-6 vertical-align" align="left">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" align="center">
+                    <div class="language" align="center">
+                        <%= image_tag("flag.png", class: "logo img-responsive", height: '50', width: '50') %>
+                        <%= link_to_unless I18n.locale == :pl, "PL", locale: :pl %>
+                        <%= link_to_unless I18n.locale == :en, "EN", locale: :en %>
+                    </div>
+                </div>
+                <div class="col-md-4 logReg">
+                    <div class="col-md-5">
+                        <%= link_to I18n.t('login'), {:controller => "pages", :action => "show", :page => "login" , :isSignIn => true} %>
+                    </div>
+                    <div class="col-md-5">
+                        <%= link_to I18n.t('registration'), {:controller => "pages", :action => "show", :page => "login" } %>
+                    </div>
+                </div>
+            </div>
+        </header>
 
+    
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="nav navbar-nav">
+                    <li><a href="#"><%= I18n.t('news') %></a></li>
+                    <li><a href="#"><%= I18n.t('about') %></a></li>
+                    <li><a href="#"><%= I18n.t('contact') %></a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </nav>
+    <p class="navbar-text pull-right">
     <%= yield %>
-  </body>
+</body>
+
 </html>
+
