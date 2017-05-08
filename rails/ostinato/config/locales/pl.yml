@@ -5,3 +5,26 @@ pl:
   contact: KONTAKT
   registration: Rejestracja
   login: Zaloguj się
+  sign_out: Wyloguj się
+  terms_of_service: Akceptuję regulamin
+  min_password: znaków minimum
+  oauth: Zaloguj się przez
+
+  activerecord:
+    models:
+      user: Użytkownik
+    attributes:
+      user:
+        name: Imię
+        surname: Nazwisko
+        tel: Telefon
+        email: Email
+        password: Hasło
+        remember_me: Zapamiętaj mnie
+
+  devise_links:
+    log_in: Zaloguj się
+    register: Zarejestruj się
+    recover: Zapomniałeś hasła?
+    confirm: Nie otrzymałeś instrukcji potwierdzenia?
+    unlock: Nie otrzymałeś instrukcji odblokowania?

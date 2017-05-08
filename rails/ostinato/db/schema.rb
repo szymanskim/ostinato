@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 20170507112722) do
   create_table "users", force: :cascade do |t|
     t.string   "name",                                null: false
     t.string   "surname",                             null: false
-    t.integer  "type",                   default: 0,  null: false
+    t.integer  "group",                  default: 0,  null: false
     t.string   "tel"
     t.text     "description"
     t.datetime "created_at",                          null: false
