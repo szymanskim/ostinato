@@ -1,0 +1,50 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+        <div class="formWrapper">
+            <div class="row">
+                <div class="col-xs-10 col-sm-5 col-md-3 content paddingRemove">
+                    <%= link_to new_user_session_url do %>
+                      <div class="col-xs-6 info">
+                        <h5> <%= I18n.t('login') %></h5>
+                      </div>
+                    <% end %>
+                    <div class="col-xs-6 info">
+                        <h5> <%= I18n.t('registration') %></h5>
+                    </div>
+                    <div class="row">
+                        <div class="registerWrapper">
+                                <div class="form-group">
+                                    <%= f.label :name %><br />
+                                    <%= f.text_field :name, autofocus: true, class: "form-control"%>
+                                </div>
+                                <div class="form-group">
+                                    <%= f.label :surname %><br />
+                                    <%= f.text_field :surname, class: "form-control"%>
+                                </div>
+                                <div class="form-group">
+                                    <%= f.label :email %><br />
+                                    <%= f.email_field :email, class: "form-control"%>
+                                </div>
+                                <div class="form-group">
+                                    <%= f.label :password %>
+                                    <% if @minimum_password_length %>
+                                    <em>(<%= @minimum_password_length %> <%= I18n.t('min_password')%>)</em>
+                                    <% end %><br />
+                                    <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+                                </div>
+                                <div class="col-xs-12"> 
+                                    <div class="checkbox">
+                                        <label>
+                                          <%= f.check_box :terms_of_service %><%= I18n.t('terms_of_service') %>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <%= f.submit I18n.t('registration'), class: "btn btn-default"%>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<% end %>

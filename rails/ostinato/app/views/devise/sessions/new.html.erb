@@ -1,0 +1,45 @@
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+  <div class="formWrapper">
+      <div class="row">
+          <div class="col-xs-10 col-sm-5 col-md-3 content paddingRemove"">
+              <div class="col-xs-6 info">
+                <h5> <%= I18n.t('login') %></h5>
+              </div>
+              <%= link_to new_user_registration_url do %>
+                <div class="col-xs-6 info">
+                  <h5> <%= I18n.t('registration') %></h5>
+                </div>
+              <% end %>
+              <div class="loginWrapper">
+                <form>
+                  <div class="form-group">
+                    <%= f.label :email %><br />
+                    <%= f.email_field :email, class: "form-control" %>
+                  </div>
+                  <div class="form-group">
+                    <%= f.label :password %><br />
+                    <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+                  </div>
+                  <div class="col-xs-12">
+                    <div class="checkbox">
+                      <% if devise_mapping.rememberable? -%>
+                        <div class="field">
+                          <%= f.check_box :remember_me %>
+                          <%= f.label :remember_me %>
+                        </div>
+                      <% end -%>
+                    </div>
+                  </div>
+                  <div class="col-xs-12">
+                    <button type="submit" class="btn btn-default">Zaloguj się</button>
+                  </div>
+                </form>
+                <div class="col-xs-12"> 
+                  <%= render "devise/shared/links" %>
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+<% end %>
