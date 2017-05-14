@@ -9,6 +9,7 @@ pl:
   terms_of_service: Akceptuję regulamin
   min_password: znaków minimum
   oauth: Zaloguj się przez
+  rights: Wszelkie prawa zastrzeżone
 
   activerecord:
     models:
@@ -21,6 +22,21 @@ pl:
         email: Email
         password: Hasło
         remember_me: Zapamiętaj mnie
+        terms_of_service: Regulamin
+    errors:
+      models:
+        user:
+          attributes:
+            terms_of_service:
+              accepted: musi być zaakceptowany.
+            email:
+              blank: nie może być pusty.
+            password:
+              blank: nie może być puste.
+            name:
+              blank: musi zostać podane.
+            surname:
+              blank: musi zostać podane.
 
   devise_links:
     log_in: Zaloguj się
@@ -28,3 +44,5 @@ pl:
     recover: Zapomniałeś hasła?
     confirm: Nie otrzymałeś instrukcji potwierdzenia?
     unlock: Nie otrzymałeś instrukcji odblokowania?
+  send_reset_password: "Wyślij mi instrukcje do zresetowania hasła"
+  forgot_password: Zapomniałeś hasło?

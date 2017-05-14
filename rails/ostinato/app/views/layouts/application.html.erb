@@ -14,73 +14,13 @@
 
 <body>
     <div id="wrapper">
-        <header>
-            <div class="row" id="main-nav">
-                <div class="col-md-4 vertical-align paddingRemove">
-                        <%= link_to (image_tag("logo.png", class: "logo img-responsive", width:"100", height:"50")), {:controller => "/pages", :action => "show", :page => "home"} %>
-                    <div class="col-md-8 vertical-align" align="left">
-                        <div class="col-md-6 vertical-align" align="left">
-                            <%= link_to :controller => "/pages", :action => "show", :page => "home" do %>
-                                <h1><span class="label label-danger">Ostinato</span></h1>
-                            <% end %>
-                        </div>
-                        <div class="col-md-6 vertical-align" align="left">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" align="center">
-                    <div class="language" align="center">
-                        <%= image_tag("flag.png", class: "logo img-responsive", height: '50', width: '50') %>
-                        <%= link_to_unless I18n.locale == :pl, "PL", locale: :pl %>
-                        <%= link_to_unless I18n.locale == :en, "EN", locale: :en %>
-                    </div>
-                </div>
-                <div class="col-md-4 logReg">
-                    <div class="col-md-5">
-                        <% unless user_signed_in? %>
-                            <%= link_to I18n.t('registration'), new_user_registration_url %>
-                        <% end %>
-                    </div>
-                    <div class="col-md-5">
-                        <% if user_signed_in? %>
-                            <%= link_to I18n.t('sign_out'), destroy_user_session_path, :method => :delete  %>
-                        <% else %>
-                            <%= link_to I18n.t('login'), new_user_session_url %>
-                        <% end %>
-                    </div>
-                </div>
-            </div>
-           
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
-
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                      </button>
-                    </div>
-
-                    <div class="collapse navbar-collapse" id="menu">
-                        <ul class="nav navbar-nav">
-                            <li><a href="#"><%= I18n.t('news') %></a></li>
-                            <li><a href="#"><%= I18n.t('about') %></a></li>
-                            <li><a href="#"><%= I18n.t('contact') %></a></li>
-                        </ul>
-                    </div>
-
-                </div>
-            </nav>
-    </header>
+        <%= render "layouts/header" %>
     <main>
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
+        <%= render "layouts/messages" %>
         <%= yield %>
     </main>
     <footer>
-        Ostinato - <%= I18n.t('title') %> <sup> &copy; </sup>; Wszelkie prawa zastrzeżone
+        Ostinato - <%= I18n.t('title') %> <sup> &copy; </sup>; <%= I18n.t('rights') %>
     </footer>
     </div>
 </body>
