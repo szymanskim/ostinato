@@ -1,0 +1,39 @@
+<div id="fb-root"></div>
+<script>
+document.addEventListener("turbolinks:load", function() {
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = '//connect.facebook.net/<%= I18n.t('facebook_lang')%>/sdk.js#xfbml=1&version=v2.9&appId=400058277037568';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+});
+</script>
+<div id="contact_container">
+  <div class="row">
+    <div class="col-md-7 static">
+      <h3> <%= I18n.t('contact') %> </h3>
+      <div class="contact_data">
+        <span id="sizing-addon"><b> Jarek Skórski </b> </span> <br/>
+        <span class="glyphicon glyphicon-envelope" id="sizing-addon"> ostinato@interia.pl </span> <br/>
+        <span class="glyphicon glyphicon-earphone" id="sizing-addon"> 501 409 333 </span> <br/>
+        <hr class="lines"> <br/>
+        <%= image_tag("recrutation.jpg", id: "recrutation") %>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <h3> FACEBOOK </h3>
+      <div class="contact_data dynamic">
+          <div id="fb">
+            <div class="fb-page" data-href="https://www.facebook.com/OstinatoWroclaw/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-height="1000" data-hide-cover="false" min-width="500px" data-show-facepile="true">
+              <blockquote cite="https://www.facebook.com/OstinatoWroclaw/" class="fb-xfbml-parse-ignore">
+                <a href="https://www.facebook.com/OstinatoWroclaw/">Ostinato Ensemble</a>
+              </blockquote>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"> </div>
+</div>

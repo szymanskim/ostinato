@@ -3,6 +3,7 @@ pl:
   news: AKTUALNOŚCI
   about: O NAS
   contact: KONTAKT
+  about_us: O zespole
   registration: Rejestracja
   login: Zaloguj się
   sign_out: Wyloguj się
@@ -11,6 +12,8 @@ pl:
   oauth: Zaloguj się przez
   rights: Wszelkie prawa zastrzeżone
 
+  facebook_lang: pl_PL
+  
   activerecord:
     models:
       user: Użytkownik

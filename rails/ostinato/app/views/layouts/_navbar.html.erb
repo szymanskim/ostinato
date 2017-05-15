@@ -12,9 +12,9 @@
 
         <div class="collapse navbar-collapse" id="menu">
             <ul class="nav navbar-nav">
-                <li><a href="#"><%= I18n.t('news') %></a></li>
-                <li><a href="#"><%= I18n.t('about') %></a></li>
-                <li><a href="#"><%= I18n.t('contact') %></a></li>
+                <li><%= link_to I18n.t('news'), {:controller => "/pages", :action => "show", :page => "home"}%> </li>
+                <li><%= link_to I18n.t('about'), {:controller => "/pages", :action => "show", :page => "about"}%> </li>
+                <li><%= link_to I18n.t('contact'), {:controller => "/pages", :action => "show", :page => "contact"}%> </li>
             </ul>
         </div>
 

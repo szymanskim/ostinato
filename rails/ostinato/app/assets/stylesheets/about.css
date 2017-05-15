@@ -1,0 +1,25 @@
+h2{
+  margin:0 auto;
+}
+
+#group_photo{
+  width: 100%;
+}
+
+#about_center{
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+#about_text{
+  width: 100%;
+  background: #dddddd;
+}
+
+p.center {
+    margin: 40px;
+    text-align: center;
+    font-size:  150%;
+    color: black;
+}

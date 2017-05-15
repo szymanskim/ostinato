@@ -3,6 +3,7 @@ en:
   news: NEWS
   about: ABOUT US
   contact: CONTACT
+  about_us: About us
   registration: Registration
   login: Login
   sign_out: Sign out
@@ -11,6 +12,8 @@ en:
   oauth: Login in with
   rights: All rigths reserved
 
+  facebook_lang: en_EN
+  
   activerecord:
     models:
       user: User
