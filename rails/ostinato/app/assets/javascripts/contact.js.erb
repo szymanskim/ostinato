@@ -3,15 +3,13 @@
 //= require jquery.turbolinks
 //= require twitter/bootstrap
 //= require turbolinks
-
-$(document).ready(function() {
-    
-    var dynamic = $('.dynamic');
+document.addEventListener("turbolinks:load", (function() {
     var static = $('.static');
-    
-    static.height(dynamic.height());
+    var fb = $('.fb-page');
 
-});
+    fb.height(static.height());
+
+}));
 
 (function($) {
   var fbRoot;
