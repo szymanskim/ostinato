@@ -11,8 +11,14 @@ pl:
   min_password: znaków minimum
   oauth: Zaloguj się przez
   rights: Wszelkie prawa zastrzeżone
+  back: Powrót
 
   facebook_lang: pl_PL
+
+  admin_panel:
+    is_admin: Uprawnienia administratora
+    new_user: Nowy użytkownik
+    create_user: Stwórz użytkownika
   
   activerecord:
     models:
@@ -34,8 +40,10 @@ pl:
               accepted: musi być zaakceptowany.
             email:
               blank: nie może być pusty.
+              taken: jest już zajęty.
             password:
               blank: nie może być puste.
+              too_short: jest za krótkie.
             name:
               blank: musi zostać podane.
             surname:

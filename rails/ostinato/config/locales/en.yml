@@ -11,9 +11,15 @@ en:
   min_password: characters minimum
   oauth: Login in with
   rights: All rigths reserved
+  back: Back
 
   facebook_lang: en_EN
   
+  admin_panel:
+    is_admin: Administrator rights
+    new_user: New user
+    create_user: Stwórz użytkownika
+
   activerecord:
     models:
       user: User
