@@ -49,6 +49,8 @@ pl:
               blank: musi zostać podane.
             surname:
               blank: musi zostać podane.
+      messages:
+        record_invalid: błędny rekord
 
   devise_links:
     log_in: Zaloguj się
