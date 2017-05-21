@@ -73,8 +73,6 @@ class UsersController < ApplicationController
       :tel, :description, :is_admin)
   end
 
-  private
-
   def authenticate_admin!
     authenticate_user!
     unless current_user.is_admin?
