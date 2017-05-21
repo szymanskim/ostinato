@@ -31,6 +31,7 @@ en:
         email: Email
         password: Password
         remember_me: Remember me
+        is_admin: Administrator rights
         
   devise_links:
     log_in: Log in

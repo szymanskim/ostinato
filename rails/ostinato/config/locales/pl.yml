@@ -32,6 +32,7 @@ pl:
         password: Hasło
         remember_me: Zapamiętaj mnie
         terms_of_service: Regulamin
+        is_admin: Uprawnienia administratora
     errors:
       models:
         user:

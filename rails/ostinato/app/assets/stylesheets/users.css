@@ -1,0 +1,19 @@
+.form-title{
+  text-align: center;
+}
+
+.link-carrier{
+  text-align: center;
+}
+
+.button {
+    display: inline-block;
+    width: 115px;
+    height: 30px;
+    background: #4E9CAF;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
