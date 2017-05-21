@@ -3,6 +3,7 @@ en:
   news: NEWS
   about: ABOUT US
   contact: CONTACT
+  admin_users: USERS
   about_us: About us
   registration: Registration
   login: Login
@@ -18,7 +19,8 @@ en:
   admin_panel:
     is_admin: Administrator rights
     new_user: New user
-    create_user: Stwórz użytkownika
+    create_user: Create user
+    only_admin: You must be an admin!
 
   activerecord:
     models:

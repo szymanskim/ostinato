@@ -10,10 +10,6 @@ class User < ApplicationRecord
   has_many :comments
   has_many :files
 
-  def authenticate_admin!
-    authenticate_user! && current_user.is_admin?
-  end
-
   validates :name, presence: true
   validates :surname, presence: true
 end

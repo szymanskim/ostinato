@@ -3,6 +3,7 @@ pl:
   news: AKTUALNOŚCI
   about: O NAS
   contact: KONTAKT
+  admin_users: UŻYTKOWNICY
   about_us: O zespole
   registration: Rejestracja
   login: Zaloguj się
@@ -19,6 +20,7 @@ pl:
     is_admin: Uprawnienia administratora
     new_user: Nowy użytkownik
     create_user: Stwórz użytkownika
+    only_admin: Nie masz uprawnień administratora!
   
   activerecord:
     models:
