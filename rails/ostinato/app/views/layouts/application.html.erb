@@ -15,13 +15,13 @@
 <body>
     <div id="wrapper">
         <%= render "layouts/header" %>
-    <main>
-        <%= render "layouts/messages" %>
-        <%= yield %>
-    </main>
-    <footer>
-        Ostinato - <%= I18n.t('title') %> <sup> &copy; </sup>; <%= I18n.t('rights') %>
-    </footer>
+        <main>
+            <%= render "layouts/messages" %>
+            <%= yield %>
+        </main>
+        <footer>
+            Ostinato - <%= I18n.t('title') %> <sup> &copy; </sup>; <%= I18n.t('rights') %>
+        </footer>
     </div>
 </body>
 </html>

@@ -16,11 +16,11 @@
     <%= f.text_field :codename, class: "form-control"%>
   </div>
   <div class="form-group">
-    <%= f.label :type %><br />
-    <%= f.number_field :type, class: "form-control" %>
+    <%= f.label :group %><br />
+    <%= f.number_field :group, class: "form-control" %>
   </div>
   <br />
   <div class="actions">
-    <%= f.submit I18n.t('admin_panel.create_user') %>
+    <%= f.submit I18n.t('topics.create_topic') %>
   </div>
 <% end %>

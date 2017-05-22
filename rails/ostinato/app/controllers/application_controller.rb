@@ -16,4 +16,12 @@ class ApplicationController < ActionController::Base
     I18n.locale = params[:locale] || I18n.default_locale
     Rails.application.routes.default_url_options[:locale] = I18n.locale
   end
+
+  def authenticate_admin!
+    authenticate_user!
+    unless current_user.is_admin?
+      flash[:alert] = I18n.t('admin_panel.only_admin')
+      redirect_to root_path
+    end
+  end
 end

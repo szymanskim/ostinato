@@ -4,7 +4,7 @@ pl:
   about: O NAS
   contact: KONTAKT
   admin_users: UŻYTKOWNICY
-  topics: TABLICE
+  topics_tab: TABLICE
   about_us: O zespole
   registration: Rejestracja
   login: Zaloguj się
@@ -23,6 +23,9 @@ pl:
     create_user: Stwórz użytkownika
     only_admin: Nie masz uprawnień administratora!
   
+  topics:
+    create_topics: Create topic
+
   activerecord:
     models:
       user: Użytkownik
