@@ -1,0 +1,57 @@
+<div class="formWrapper">
+  <div class="row">
+    <div class="col-xs-10 col-sm-5 col-md-3 content paddingRemove"">
+      <%= form_for(user) do |f| %>
+        <% if user.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+            <ul>
+            <% user.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="form-group">
+          <%= f.label :name %><br />
+          <%= f.text_field :name, autofocus: true, class: "form-control"%>
+        </div>
+        <div class="form-group">
+          <%= f.label :surname %><br />
+          <%= f.text_field :surname, class: "form-control"%>
+        </div>
+        <div class="form-group">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, class: "form-control"%>
+        </div>
+        <div class="form-group">
+          <%= f.label :password %>
+          <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> <%= I18n.t('min_password')%>)</em>
+          <% end %><br />
+            <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :tel %><br />
+          <%= f.telephone_field :tel, class: "form-control"%>
+        </div>
+        <div class="form-group">
+          <%= f.label :description %><br />
+          <%= f.text_area :description, class: "form-control", rows: 5 %>
+        </div>
+
+        <div class="checkbox">
+          <label>
+            <%= f.check_box :is_admin %><%= I18n.t('admin_panel.is_admin') %>
+          </label>
+        </div>
+        <br />
+        <div class="actions">
+          <%= f.submit I18n.t('admin_panel.create_user') %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -3,6 +3,7 @@ pl:
   news: AKTUALNOŚCI
   about: O NAS
   contact: KONTAKT
+  admin_users: UŻYTKOWNICY
   about_us: O zespole
   registration: Rejestracja
   login: Zaloguj się
@@ -11,8 +12,15 @@ pl:
   min_password: znaków minimum
   oauth: Zaloguj się przez
   rights: Wszelkie prawa zastrzeżone
+  back: Powrót
 
   facebook_lang: pl_PL
+
+  admin_panel:
+    is_admin: Uprawnienia administratora
+    new_user: Nowy użytkownik
+    create_user: Stwórz użytkownika
+    only_admin: Nie masz uprawnień administratora!
   
   activerecord:
     models:
@@ -26,6 +34,7 @@ pl:
         password: Hasło
         remember_me: Zapamiętaj mnie
         terms_of_service: Regulamin
+        is_admin: Uprawnienia administratora
     errors:
       models:
         user:
@@ -34,12 +43,16 @@ pl:
               accepted: musi być zaakceptowany.
             email:
               blank: nie może być pusty.
+              taken: jest już zajęty.
             password:
               blank: nie może być puste.
+              too_short: jest za krótkie.
             name:
               blank: musi zostać podane.
             surname:
               blank: musi zostać podane.
+      messages:
+        record_invalid: błędny rekord
 
   devise_links:
     log_in: Zaloguj się

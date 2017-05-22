@@ -22,9 +22,9 @@ gem 'coffee-rails', '~> 4.2'
 gem 'devise'
 
 gem 'less-rails'
+gem 'rails-controller-testing'
 gem 'therubyracer'
 gem 'twitter-bootstrap-rails', '~> 3.2', '>= 3.2.2'
-
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
