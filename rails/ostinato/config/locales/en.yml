@@ -34,6 +34,24 @@ en:
         password: Password
         remember_me: Remember me
         is_admin: Administrator rights
+        errors:
+      models:
+        user:
+          attributes:
+            terms_of_service:
+              accepted: must be accepted.
+            email:
+              blank: cannot be blank.
+              taken: is already taken.
+            password:
+              blank: cannot be blank.
+              too_short: is too short.
+            name:
+              blank: must be given.
+            surname:
+              blank: must be given.
+      messages:
+        record_invalid: invalid record
         
   devise_links:
     log_in: Log in
