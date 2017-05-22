@@ -16,4 +16,54 @@
     border-radius: 5px;
     color: white;
     font-weight: bold;
+    font-size: 16px;
 }
+
+.button-new-user{
+    display: inline-block;
+    width: 115px;
+    height: 30px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+}
+
+.buton-show{
+
+}
+
+.buton-edit{
+
+}
+
+.buton-destroy{
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%
+}
+
+.table, th, td {
+    border: 1px solid black;
+}
+
+td {
+    height: 50px;
+    text-align: left;   
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: red;
+    color: white;
+    colspan: 3;
+}
+
+

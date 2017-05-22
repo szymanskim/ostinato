@@ -79,7 +79,7 @@ ActiveRecord::Schema.define(version: 20170520182535) do
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
-    t.boolean  "is_admin",               default: false
+    t.boolean  "is_admin",               default: false, null: false
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
