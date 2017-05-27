@@ -2,18 +2,18 @@
 
 <h1 class="form-title">Users</h1>
 
-<table>
+<table class="table table-condensed">
   <thead>
     <tr>
-      <th>Imię</th>
-      <th>Nazwisko</th>
-      <th>Email</th>
-      <th>Czy jest administratorem?</th>
-      <th>Telefon</th>
-      <th>Opis</th>
-      <th>Pokaż</th>
-      <th>Edytuj</th>
-      <th>Usuń</th>
+      <th><%= User.human_attribute_name("name")%></th>
+      <th><%= User.human_attribute_name("surname")%></th>
+      <th><%= User.human_attribute_name("email")%></th>
+      <th><%= User.human_attribute_name("is_admin")%></th>
+      <th><%= User.human_attribute_name("tel")%></th>
+      <th><%= User.human_attribute_name("description")%></th>
+      <th><%= User.human_attribute_name("Show")%></th>
+      <th><%= User.human_attribute_name("Edit")%></th>
+      <th><%= User.human_attribute_name("Destroy")%></th>
     </tr>
   </thead>
 
@@ -26,16 +26,14 @@
         <td><%= user.is_admin %></td>
         <td><%= user.tel %></td>
         <td><%= user.description %></td>
-        <td class="button-show"><%= link_to 'Show', user %></td>
-        <td class="button-edit"><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td class="button-destroy"><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="button-show"><i class="fa fa-eye" aria-hidden="true"></i><%= link_to 'Show', user %></td>
+        <td class="button-edit"><i class="fa fa-pencil" aria-hidden="true"></i><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td class="button-destroy"><i class="fa fa-trash-o" aria-hidden="true"></i><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<div class="button-new-user">
+<i class="fa fa-plus" aria-hidden="true">
   <%= link_to 'New User', new_user_path %>
-</div>
+</i>

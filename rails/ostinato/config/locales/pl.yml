@@ -35,6 +35,10 @@ pl:
         remember_me: Zapamiętaj mnie
         terms_of_service: Regulamin
         is_admin: Uprawnienia administratora
+        description: Opis
+        show: Pokaż
+        edit: Edytuj
+        destroy: Usuń
     errors:
       models:
         user:
