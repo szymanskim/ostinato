@@ -1,34 +1,24 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong><%= User.human_attribute_name("name") %>:</strong>
-  <%= @user.name %>
-</p>
-
-<p>
-  <strong> <%= User.human_attribute_name("surname") %>:</strong>
-  <%= @user.surname %>
-</p>
-
-<p>
-  <strong> <%= User.human_attribute_name("email") %>:</strong>
-  <%= @user.email %>
-</p>
-
-<p>
-  <strong> <%= User.human_attribute_name("tel") %>:</strong>
-  <%= @user.email %>
-</p>
-
-<p>
-  <strong> <%= User.human_attribute_name("description") %>:</strong>
-  <%= @user.description %>
-</p>
-
-<p>
-  <strong> <%= User.human_attribute_name("is_admin") %>:</strong>
-  <%= @user.is_admin %>
-</p>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-10 col-sm-8 col-md-5 content paddingRemove">
+            <div class="well well-sm">
+                <div class="row"> 
+                    <div class="col-sm-8 col-md-10">
+                        <h4> <%= @user.name %> <%= @user.surname %> </h4>
+                        <small> <i class="glyphicon glyphicon-earphone">
+                        </i> <%= @user.tel %> </small>
+                        <p>
+                            <i class="glyphicon glyphicon-envelope"></i> <%= @user.email %>
+                            <br />
+                            <i class="glyphicon glyphicon-user"></i> <%= User.human_attribute_name("is_admin") %>: <%= @user.is_admin %>
+                            <br />
+                            <i class="glyphicon glyphicon-align-justify"></i> <%= @user.description %></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="link-carrier">
   <%= link_to 'Edit', edit_user_path(@user) %> |
