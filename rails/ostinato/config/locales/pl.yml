@@ -24,7 +24,7 @@ pl:
     only_admin: Nie masz uprawnień administratora!
   
   topics:
-    create_topics: Create topic
+    create_topic: Create topic
 
   activerecord:
     models:

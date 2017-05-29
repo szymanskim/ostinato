@@ -24,7 +24,7 @@ en:
     only_admin: You must be an admin!
   
   topics:
-    create_topics: Create topic
+    create_topic: Create topic
 
   activerecord:
     models:

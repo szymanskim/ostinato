@@ -1,6 +1,6 @@
 class TopicsController < ApplicationController
-  before_action :set_topic, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_admin!, only: %i[new edit create update destroy]
+  before_action :set_topic, only: %i[show edit update destroy]
   # GET /topics
   # GET /topics.json
   def index
@@ -9,8 +9,7 @@ class TopicsController < ApplicationController
 
   # GET /topics/1
   # GET /topics/1.json
-  def show
-  end
+  def show; end
 
   # GET /topics/new
   def new
@@ -18,8 +17,7 @@ class TopicsController < ApplicationController
   end
 
   # GET /topics/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /topics
   # POST /topics.json
@@ -62,13 +60,14 @@ class TopicsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_topic
-      @topic = Topic.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def topic_params
-      params.require(:topic).permit(:codename, :group)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_topic
+    @topic = Topic.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def topic_params
+    params.require(:topic).permit(:codename, :group)
+  end
 end
