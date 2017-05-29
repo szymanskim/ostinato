@@ -9,8 +9,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1
   # GET /posts/1.json
-  def show;
-  end
+  def show; end
 
   # GET /posts/new
   def new
@@ -18,8 +17,7 @@ class PostsController < ApplicationController
   end
 
   # GET /posts/1/edit
-  def edit;
-  end
+  def edit; end
 
   # POST /posts
   # POST /posts.json
@@ -27,7 +25,6 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post = @topic.posts.new(post_params)
     @post.user_id = current_user.id
-
 
     respond_to do |format|
       if @post.save
@@ -77,6 +74,6 @@ class PostsController < ApplicationController
   end
 
   def load_parent
-   @topic = Topic.find(params[:topic_id])
+    @topic = Topic.find(params[:topic_id])
   end
 end

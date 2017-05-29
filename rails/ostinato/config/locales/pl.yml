@@ -27,7 +27,7 @@ pl:
     create_topic: Stwórz temat
 
   posts:
-    create_post: Stwórz post
+    create_post: Zapisz post
 
   activerecord:
     models:

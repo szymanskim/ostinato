@@ -27,7 +27,7 @@ en:
     create_topic: Create topic
 
   posts:
-    create_post: Create post
+    create_post: Save post
 
   activerecord:
     models:

@@ -1,18 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'New Topic', new_topic_path, class: 'btn btn-success' %>
+<div class="col-xs-1"> </div>
+<div class="col-xs-11">
+  <%= link_to "New post", new_topic_post_path, class: 'btn btn-success' %>
+</div>
 
 <center> <h1> <%=@topic.codename %></h1> </center>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<% if @posts.count == 0 %>
+  <hr class="black-separator">
+  <center> <h2> Brak postów do wyświetlenia </h2> </center>
+<% end %>
 
-  <tbody>
-    <% @posts.each do |post| %>
+<% @posts.each do |post| %>
       <div class="news">
             <div class="row">
                 <div class="col-xs-10 content">
@@ -27,12 +27,11 @@
                       </div>
                     </div>
                     <h2> <%= post.title %> </h2>
-                    <p> <%= post.content %> </p>
+                    <hr class="black-separator">
+                    <p> <%= simple_format post.content %> </p>
                 </div>
             </div>
         </div>
-    <% end %>
-  </tbody>
-</table>
+<% end %>
 
 <br>
