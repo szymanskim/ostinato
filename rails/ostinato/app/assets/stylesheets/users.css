@@ -20,6 +20,7 @@
 }
 
 .button-new-user{
+    background: pink;
     display: inline-block;
     width: 115px;
     height: 30px;
@@ -31,7 +32,15 @@
 }
 
 .buton-show{
-
+    background: pink;
+    display: inline-block;
+    width: 115px;
+    height: 30px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
 }
 
 .buton-edit{

@@ -26,14 +26,16 @@
         <td><%= user.is_admin %></td>
         <td><%= user.tel %></td>
         <td><%= user.description %></td>
-        <td class="button-show"><i class="fa fa-eye" aria-hidden="true"></i><%= link_to 'Show', user %></td>
-        <td class="button-edit"><i class="fa fa-pencil" aria-hidden="true"></i><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td class="button-destroy"><i class="fa fa-trash-o" aria-hidden="true"></i><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="button-show"><i class="fa fa-eye" aria-hidden="true"></i> <%= link_to 'Show', user %></td> 
+        <td class="button-edit"><i class="fa fa-pencil" aria-hidden="true"></i> <%= link_to 'Edit', edit_user_path(user) %></td>
+        <td class="button-destroy"><i class="fa fa-trash-o" aria-hidden="true"></i> <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <i class="fa fa-plus" aria-hidden="true">
+  <div class="button-new-user">
   <%= link_to 'New User', new_user_path %>
+  </div>
 </i>
