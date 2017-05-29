@@ -4,6 +4,7 @@ en:
   about: ABOUT US
   contact: CONTACT
   admin_users: USERS
+  topics_tab: TOPICS
   about_us: About us
   registration: Registration
   login: Login
@@ -21,6 +22,9 @@ en:
     new_user: New user
     create_user: Create user
     only_admin: You must be an admin!
+  
+  topics:
+    create_topic: Create topic
 
   activerecord:
     models:

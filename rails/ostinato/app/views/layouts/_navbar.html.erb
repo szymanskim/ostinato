@@ -1,6 +1,5 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
-
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
@@ -18,8 +17,10 @@
                 <% if admin_signed_in? %>
                 <li><%= link_to I18n.t('admin_users'), users_path %> </li>
                 <% end %>
+                <% if user_signed_in? %>
+                <li><%= link_to I18n.t('topics_tab'), topics_path %> </li>  
+                <% end %>
             </ul>
         </div>
-
     </div>
 </nav>

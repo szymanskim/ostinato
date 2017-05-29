@@ -1,20 +1,19 @@
 <header>
     <div class="row" id="main-nav">
         <div class="col-md-4 vertical-align paddingRemove">
-            <%= link_to (image_tag("logo.png", class: "logo img-responsive", width:"100", height:"50")), {:controller => "/pages", :action => "show", :page => "home"} %>
+            <%= link_to (image_tag("logo.png", id: "logo")), {:controller => "/pages", :action => "show", :page => "home"} %>
             <div class="col-md-8 vertical-align" align="left">
                 <div class="col-md-6 vertical-align" align="left">
                     <%= link_to :controller => "/pages", :action => "show", :page => "home" do %>
                         <h1><span class="label label-danger">Ostinato</span></h1>
                     <% end %>
                 </div>
-                <div class="col-md-6 vertical-align" align="left">
-                </div>
+                <div class="col-md-6 vertical-align" align="left"></div>
             </div>
         </div>
         <div class="col-md-4" align="center">
             <div class="language" align="center">
-                <%= image_tag("flag.png", class: "logo img-responsive", height: '50', width: '50') %>
+                <%= image_tag("flag.png", id: "flag") %>
                 <%= link_to_unless I18n.locale == :pl, "PL", locale: :pl %>
                 <%= link_to_unless I18n.locale == :en, "EN", locale: :en %>
             </div>
