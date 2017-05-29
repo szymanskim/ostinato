@@ -1,15 +1,11 @@
 class TopicsController < ApplicationController
   before_action :authenticate_admin!, only: %i[new edit create update destroy]
-  before_action :set_topic, only: %i[show edit update destroy]
+  before_action :set_topic, only: %i[edit update destroy]
   # GET /topics
   # GET /topics.json
   def index
     @topics = Topic.all
   end
-
-  # GET /topics/1
-  # GET /topics/1.json
-  def show; end
 
   # GET /topics/new
   def new

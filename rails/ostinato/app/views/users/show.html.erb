@@ -22,7 +22,7 @@
 
 <p>
   <strong> <%= User.human_attribute_name("description") %>:</strong>
-  <%= @user.description %>
+  <%= simple_format @user.description %>
 </p>
 
 <p>

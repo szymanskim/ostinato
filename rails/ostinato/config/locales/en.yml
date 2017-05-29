@@ -26,6 +26,9 @@ en:
   topics:
     create_topic: Create topic
 
+  posts:
+    create_post: Create post
+
   activerecord:
     models:
       user: User

@@ -144,7 +144,6 @@ header a:hover{
 .formWrapper .content{
   margin: 0 auto;
   float: none;
-  text-align: center;
   border: 1px solid #aaa;
   border-radius: 10px;
   overflow: auto;
