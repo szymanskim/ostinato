@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+.no-margin{
+  margin: 0px;
+}
+
 #logo{
   margin: 0 !important;
   padding: 0 !important;

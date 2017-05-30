@@ -15,6 +15,9 @@ pl:
   rights: Wszelkie prawa zastrzeżone
   back: Powrót
 
+  edit: Edytuj
+  delete: Usuń
+
   facebook_lang: pl_PL
 
   admin_panel:
@@ -24,6 +27,7 @@ pl:
     only_admin: Nie masz uprawnień administratora!
   
   topics:
+    author: Autor
     create_topic: Stwórz temat
     new_topic: Nowy temat
     no_posts: Brak postów.

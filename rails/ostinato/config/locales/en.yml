@@ -15,6 +15,9 @@ en:
   rights: All rigths reserved
   back: Back
 
+  edit: Edit
+  delete: Delete
+
   facebook_lang: en_EN
   
   admin_panel:
@@ -24,6 +27,7 @@ en:
     only_admin: You must be an admin!
   
   topics:
+    author: Author
     create_topic: Create topic
     new_topic: New topic
     no_posts: Lack of posts. 

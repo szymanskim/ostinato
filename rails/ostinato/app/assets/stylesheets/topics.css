@@ -1,5 +1,8 @@
 .singletopic{
-  border-radius: 25px;
   background: #cccccc;
-  padding: 20px;
+  border: 1px solid black;
+}
+
+hr{
+  margin: 5px;
 }
