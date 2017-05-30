@@ -20,7 +20,5 @@
     <%= f.cktext_area :content, class: "form-control", rows: 5 %>
   </div>
   <br />
-  <div class="actions">
-    <%= f.submit I18n.t('posts.create_post') %>
-  </div>
+  <%= f.submit I18n.t('posts.create_post'), class: 'btn btn-success' %>
 <% end %>

@@ -25,9 +25,13 @@ en:
   
   topics:
     create_topic: Create topic
+    new_topic: New topic
+    no_posts: Lack of posts. 
 
   posts:
     create_post: Save post
+    new_post: New post
+    posts: Posts
 
   activerecord:
     models:

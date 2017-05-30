@@ -3,4 +3,10 @@ class Topic < ApplicationRecord
 
   validates :codename, presence: true
   validates :group, presence: true
+
+  def last_post
+    if posts.count.positive?
+      self.posts.order('updated_at DESC').first
+    end
+  end
 end

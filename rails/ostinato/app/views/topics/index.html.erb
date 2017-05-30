@@ -4,23 +4,29 @@
   <%= link_to 'New Topic', new_topic_path, class: 'btn btn-success' %>
 <% end %>
 
-<center> <h1>Topics</h1> </center>
+<br/><br/>
 
 <% @topics.each do |topic| %>
   <div class="col-md-12 singletopic">
-    <div class="col-md-12">
+    <div class="col-md-10">
       <% if admin_signed_in? %>
       <%= link_to 'Edit', edit_topic_path(topic), class: 'btn btn-warning btn-xs' %>
       <%= link_to 'Delete', topic, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' %>
       <% end %>
       <h3> <%= link_to topic.codename,  topic_posts_path(topic) %> </h3>
     </div>
-    <div class="col-md-8">
-      <h4> Ostatnia aktywność: <i> Nowy post template </i></h4>
-    </div>
-    <div class="col-md-4">
-      <h4> 15.01.2017 10:05 </h4>
-    </div>
+    <% if topic.posts.any? %>
+      <div class="col-md-9">
+          <h4> Ostatnia aktywność: <i> <%= topic.last_post.title %> </i></h4>
+      </div>
+      <div class="col-md-3">
+        <h4> <%= topic.last_post.updated_at.strftime("%d.%m.%Y %H:%M")%> </h4>
+      </div>
+    <% else %>
+      <div class="col-md-3">
+          <h4> <%= I18n.t('topics.no_posts') %> </h4>
+      </div>
+    <% end %>
   </div>
   <div class="col-md-12">
     <hr/>
