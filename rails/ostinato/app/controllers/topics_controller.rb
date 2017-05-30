@@ -1,4 +1,5 @@
 class TopicsController < ApplicationController
+  before_action :authenticate_user!
   before_action :authenticate_admin!, only: %i[new edit create update destroy]
   before_action :set_topic, only: %i[edit update destroy]
   # GET /topics
