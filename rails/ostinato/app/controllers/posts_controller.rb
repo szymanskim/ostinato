@@ -2,6 +2,8 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
   before_filter :load_parent
   before_action :set_post, only: %i[show edit update destroy]
+  before_action :authenticate_author!, only: %i[edit update destroy]
+
   # GET /posts
   # GET /posts.json
   def index
@@ -29,7 +31,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to [@topic, @post], notice: 'Post was successfully created.' }
+        format.html { redirect_to [@topic, @post], notice: I18n.t('posts.post_created') }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new }
@@ -43,7 +45,7 @@ class PostsController < ApplicationController
   def update
     respond_to do |format|
       if @post.update(post_params)
-        format.html { redirect_to [@topic, @post], notice: 'Post was successfully updated.' }
+        format.html { redirect_to [@topic, @post], notice: I18n.t('posts.post_updated') }
         format.json { render :show, status: :ok, location: @post }
       else
         format.html { render :edit }
@@ -57,7 +59,10 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     respond_to do |format|
-      format.html { redirect_to topic_posts_path(@topic), notice: 'Post was successfully destroyed.' }
+      format.html do
+        redirect_to topic_posts_path(@topic),
+        notice: I18n.t('posts.post_deleted')
+      end
       format.json { head :no_content }
     end
   end
@@ -76,5 +81,13 @@ class PostsController < ApplicationController
 
   def load_parent
     @topic = Topic.find(params[:topic_id])
+  end
+
+  def authenticate_author!
+    authenticate_user!
+    unless current_user.id == @post.user.id || current_user.is_admin?
+      flash[:alert] = I18n.t('posts.only_author')
+      redirect_to root_path
+    end
   end
 end

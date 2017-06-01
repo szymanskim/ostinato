@@ -6,7 +6,7 @@ class Topic < ApplicationRecord
 
   def last_post
     if posts.count.positive?
-      self.posts.order('updated_at DESC').first
+      posts.order('updated_at DESC').first
     end
   end
 end

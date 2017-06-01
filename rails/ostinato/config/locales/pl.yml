@@ -31,11 +31,18 @@ pl:
     create_topic: Stwórz temat
     new_topic: Nowy temat
     no_posts: Brak postów.
+    topic_created: Temat został pomyślnie dodany.
+    topic_updated: Temat pomyślnie zaktualizowany.
+    topic_deleted: Temat został pomyślnie usunięty.
 
   posts:
     create_post: Zapisz post
     new_post: Nowy post
     posts: Posty
+    only_author: Nie jesteś autorem postu ani adminem!
+    post_created: Post został pomyślnie dodany.
+    post_updated: Post pomyślnie zaktualizowany.
+    post_deleted: Post został pomyślnie usunięty.
 
   activerecord:
     models:

@@ -30,12 +30,19 @@ en:
     author: Author
     create_topic: Create topic
     new_topic: New topic
-    no_posts: Lack of posts. 
+    no_posts: Lack of posts.
+    topic_created: Topic was successfully created.
+    topic_updated: Topic was successfully updated.
+    topic_deleted: Topic was successfully deleted.
 
   posts:
     create_post: Save post
     new_post: New post
     posts: Posts
+    only_author: You must be the author of the post or an admin!
+    post_created: Post was successfully created.
+    post_updated: Post was successfully updated.
+    post_deleted: Post was successfully deleted.
 
   activerecord:
     models:
