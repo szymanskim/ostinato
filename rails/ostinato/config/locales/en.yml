@@ -14,6 +14,7 @@ en:
   oauth: Login in with
   rights: All rigths reserved
   back: Back
+  show: Show
 
   edit: Edit
   delete: Delete
@@ -28,9 +29,11 @@ en:
   
   topics:
     author: Author
-    create_topic: Create topic
+    create_topic: Zapisz temat
     new_topic: New topic
     no_posts: Lack of posts.
+    edit_post: Editing post
+    edit_topic: Editing topic
     topic_created: Topic was successfully created.
     topic_updated: Topic was successfully updated.
     topic_deleted: Topic was successfully deleted.
@@ -47,7 +50,11 @@ en:
   activerecord:
     models:
       user: User
+      topic: Topic
     attributes:
+      topic:
+        codename: Topic name
+        public: Public topic
       user:
         name: Name
         surname: Surname

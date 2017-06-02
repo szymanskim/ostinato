@@ -14,6 +14,7 @@ pl:
   oauth: Zaloguj się przez
   rights: Wszelkie prawa zastrzeżone
   back: Powrót
+  show: Pokaż
 
   edit: Edytuj
   delete: Usuń
@@ -28,9 +29,11 @@ pl:
   
   topics:
     author: Autor
-    create_topic: Stwórz temat
+    create_topic: Zapisz temat
     new_topic: Nowy temat
     no_posts: Brak postów.
+    edit_post: Edycja posta
+    edit_topic: Edycja tematu
     topic_created: Temat został pomyślnie dodany.
     topic_updated: Temat pomyślnie zaktualizowany.
     topic_deleted: Temat został pomyślnie usunięty.
@@ -47,7 +50,11 @@ pl:
   activerecord:
     models:
       user: Użytkownik
+      topic: Temat
     attributes:
+      topic:
+        codename: Nazwa tematu
+        public: Temat publiczny
       user:
         name: Imię
         surname: Nazwisko

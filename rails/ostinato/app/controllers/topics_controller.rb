@@ -23,7 +23,7 @@ class TopicsController < ApplicationController
 
     respond_to do |format|
       if @topic.save
-        format.html { redirect_to @topic, notice: I18n.t('topics.topic_created') }
+        format.html { redirect_to topics_url, notice: I18n.t('topics.topic_created') }
         format.json { render :show, status: :created, location: @topic }
       else
         format.html { render :new }
@@ -37,7 +37,7 @@ class TopicsController < ApplicationController
   def update
     respond_to do |format|
       if @topic.update(topic_params)
-        format.html { redirect_to @topic, notice: I18n.t('topics.topic_updated') }
+        format.html { redirect_to topics_url, notice: I18n.t('topics.topic_updated') }
         format.json { render :show, status: :ok, location: @topic }
       else
         format.html { render :edit }
