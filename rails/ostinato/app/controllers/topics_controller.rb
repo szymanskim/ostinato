@@ -1,15 +1,12 @@
 class TopicsController < ApplicationController
+  before_action :authenticate_user!
   before_action :authenticate_admin!, only: %i[new edit create update destroy]
-  before_action :set_topic, only: %i[show edit update destroy]
+  before_action :set_topic, only: %i[edit update destroy]
   # GET /topics
   # GET /topics.json
   def index
     @topics = Topic.all
   end
-
-  # GET /topics/1
-  # GET /topics/1.json
-  def show; end
 
   # GET /topics/new
   def new
@@ -26,7 +23,7 @@ class TopicsController < ApplicationController
 
     respond_to do |format|
       if @topic.save
-        format.html { redirect_to @topic, notice: 'Topic was successfully created.' }
+        format.html { redirect_to topics_url, notice: I18n.t('topics.topic_created') }
         format.json { render :show, status: :created, location: @topic }
       else
         format.html { render :new }
@@ -40,7 +37,7 @@ class TopicsController < ApplicationController
   def update
     respond_to do |format|
       if @topic.update(topic_params)
-        format.html { redirect_to @topic, notice: 'Topic was successfully updated.' }
+        format.html { redirect_to topics_url, notice: I18n.t('topics.topic_updated') }
         format.json { render :show, status: :ok, location: @topic }
       else
         format.html { render :edit }
@@ -54,7 +51,7 @@ class TopicsController < ApplicationController
   def destroy
     @topic.destroy
     respond_to do |format|
-      format.html { redirect_to topics_url, notice: 'Topic was successfully destroyed.' }
+      format.html { redirect_to topics_url, notice: I18n.t('topics.topic_deleted') }
       format.json { head :no_content }
     end
   end
@@ -68,6 +65,6 @@ class TopicsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def topic_params
-    params.require(:topic).permit(:codename, :group)
+    params.require(:topic).permit(:codename, :public)
   end
 end

@@ -1,0 +1,36 @@
+<div class="col-xs-1"> </div>
+<div class="col-xs-11">
+  <%= link_to I18n.t('posts.new_post'), new_topic_post_path, class: 'btn btn-success' %>
+</div>
+
+<center> <h1> <%=@topic.codename %></h1> </center>
+
+<% if @posts.count == 0 %>
+  <hr class="black-separator">
+  <center> <h2> Brak postów do wyświetlenia </h2> </center>
+<% end %>
+
+<% @posts.each do |post| %>
+      <div class="news">
+            <div class="row">
+                <div class="col-xs-10 content">
+                    <div class="row">
+                      <div class="col-xs-9">
+                        <h5 class="date"><span class="glyphicon glyphicon-calendar"></span> <%= post.created_at.strftime("%d.%m.%Y %H:%M") %></h5>
+                      </div>
+                      <div class="col-xs-3 right-align">
+                        <% if author?(post)%>
+                          <%= link_to I18n.t('edit'), edit_topic_post_path(@topic, post), class: 'btn btn-warning btn-xs' %>
+                          <%= link_to I18n.t('delete'), [@topic, post], method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' %>
+                        <% end %>  
+                      </div>
+                    </div>
+                    <h2 class='no-margin'> <%= link_to post.title, topic_post_path(@topic, post) %> </h2>
+                    <p> <%= I18n.t('topics.author') %>:
+                        <%= post.user.name %>
+                        <%= post.user.surname %>
+                    </p>
+                </div>
+            </div>
+        </div>
+<% end %>

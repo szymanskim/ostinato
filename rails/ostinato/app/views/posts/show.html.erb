@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-xs-1"> </div>
+  <div class="col-xs-10"> <%= link_to I18n.t('back'), topic_posts_path(@topic), class: 'btn btn-warning' %> </div>
+</div>
+
+<br />
+
+<div class="news">
+  <div class="row">
+    <div class="col-xs-10 content">
+      <div class="row">
+        <div class="col-xs-2">
+          <h5 class="date"><span class="glyphicon glyphicon-calendar"></span> <%= @post.created_at.strftime("%d.%m.%Y %H:%M") %></h5>
+        </div>
+        <div class="col-xs-7">
+          <h5><span class="glyphicon glyphicon-user"></span>
+          <%= I18n.t('topics.author') %>:
+          <%= @post.user.name %>
+          <%= @post.user.surname %>
+          </h5>
+        </div>
+        <div class="col-xs-3 right-align">
+          <% if author?(@post)%>
+            <%= link_to I18n.t('edit'), edit_topic_post_path(@topic, @post), class: 'btn btn-warning btn-xs' %>
+            <%= link_to I18n.t('delete'), [@topic, @post], method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' %>
+          <% end %>        
+        </div>
+      </div>
+      <h2> <%= link_to @post.title, topic_post_path(@topic, @post)  %> </h2>
+      <hr class="black-separator">
+      <p> <%= simple_format @post.content %> </p>
+    </div>
+  </div>
+</div>
+
