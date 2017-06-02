@@ -2,7 +2,6 @@ class Topic < ApplicationRecord
   has_many :posts
 
   validates :codename, presence: true
-  validates :public, presence: true
 
   def last_post
     if posts.count.positive?
