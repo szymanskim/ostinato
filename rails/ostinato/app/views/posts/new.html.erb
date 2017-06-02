@@ -1,0 +1,8 @@
+<div class="form-container">
+<%= link_to I18n.t('back'), topic_posts_path(@topic), class: 'btn btn-warning' %>
+
+<h1><%= I18n.t('posts.new_post') %> </h1>
+
+<%= render 'form', post: @post %>
+</div>
+

@@ -15,6 +15,7 @@
 //= require jquery.turbolinks
 //= require twitter/bootstrap
 //= require turbolinks
+//= require ckeditor/init
 //= require_tree .
 @import "font-awesome-sprockets";
 @import "font-awesome";

@@ -1,0 +1,9 @@
+<div class="form-container">
+    <%= link_to I18n.t('show'), topic_posts_path(@topic), class: 'btn btn-info' %>
+    <%= link_to I18n.t('back'), topics_path, class: 'btn btn-warning' %>
+    <br/><br/>
+    <h1><%= I18n.t('topics.edit_topic') %> </h1>
+    <br/>
+    <%= render 'form', topic: @topic %>
+    <br/>
+</div>

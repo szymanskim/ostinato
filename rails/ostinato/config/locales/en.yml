@@ -4,6 +4,7 @@ en:
   about: ABOUT US
   contact: CONTACT
   admin_users: USERS
+  topics_tab: TOPICS
   about_us: About us
   registration: Registration
   login: Login
@@ -13,6 +14,10 @@ en:
   oauth: Login in with
   rights: All rigths reserved
   back: Back
+  show: Show
+
+  edit: Edit
+  delete: Delete
 
   facebook_lang: en_EN
   
@@ -21,11 +26,35 @@ en:
     new_user: New user
     create_user: Create user
     only_admin: You must be an admin!
+  
+  topics:
+    author: Author
+    create_topic: Zapisz temat
+    new_topic: New topic
+    no_posts: Lack of posts.
+    edit_post: Editing post
+    edit_topic: Editing topic
+    topic_created: Topic was successfully created.
+    topic_updated: Topic was successfully updated.
+    topic_deleted: Topic was successfully deleted.
+
+  posts:
+    create_post: Save post
+    new_post: New post
+    posts: Posts
+    only_author: You must be the author of the post or an admin!
+    post_created: Post was successfully created.
+    post_updated: Post was successfully updated.
+    post_deleted: Post was successfully deleted.
 
   activerecord:
     models:
       user: User
+      topic: Topic
     attributes:
+      topic:
+        codename: Topic name
+        public: Public topic
       user:
         name: Name
         surname: Surname
