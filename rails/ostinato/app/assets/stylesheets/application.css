@@ -13,8 +13,14 @@
  *= require_tree .
  *= require_self
  */
-.no-margin{
-  margin: 0px;
+
+.no-margin-left{
+  margin-left: 0px !important;
+  padding-left:  0px;
+}
+
+.margin-auto{
+  margin: 0 auto;
 }
 
 #logo{
@@ -166,6 +172,9 @@ header a:hover{
 
 .formWrapper .content .info{
   border-bottom: 1px solid #aaa;
+  text-align: center;
+  border-right: solid #aaaaaa 1px;
+  border-left: solid #aaaaaa 1px;
 }
 
 header .language span span:hover,
