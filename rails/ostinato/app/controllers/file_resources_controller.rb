@@ -12,17 +12,18 @@ class FileResourcesController < ApplicationController
   def create
     @file = FileResource.new(file_params)
     @file.user_id = current_user.id
+    @file.folder = 'samthing'
     if @file.save
       redirect_to file_resources_path(id: @file.id), notice: "The file #{@file.name} has been uploaded."
     else
-      render "new"
+      render 'new'
     end
   end
 
   def destroy
     @file = FileResource.find(params[:id])
     @file.destroy
-    redirect_to file_resources_path, notice:  "The file #{@file.name} has been deleted."
+    redirect_to file_resources_path, notice: "The file #{@file.name} has been deleted."
   end
 
   def download_file
@@ -31,6 +32,7 @@ class FileResourcesController < ApplicationController
   end
 
   private
+
   def file_params
     params.require(:file_resource).permit(:name, :attachment, :description)
   end
