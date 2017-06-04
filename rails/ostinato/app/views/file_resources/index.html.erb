@@ -19,8 +19,7 @@
     <% @files.each do |file| %>
       <tr>
         <td><%= file.name %></td>
-        <%= link_to FileResource.basename(file.attachment.path), file.attachment_url(:query => {"response-content-disposition" => "attachment"}).to_s %>
-        <td><%= link_to "Download File", file.attachment_url %></td>
+        <td><%= link_to "Download File", file_resources_download_path(id: file.id) %></td>
         <td><%= button_to "Delete",  file, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{file.name}?" %></td>
       </tr>
     <% end %>

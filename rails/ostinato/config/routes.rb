@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :posts
   end
   resources :file_resources, only: [:index, :new, :create, :destroy]
+  get "/file_resources/download" => "file_resources#download_file"
   get "/pages/:page" => "pages#show"
   root "pages#home"
 end
