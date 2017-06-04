@@ -1,0 +1,18 @@
+asymetryczne szyfrowanie
+
+asymetryczne algorytmy s¹ dwukluczowe
+
+Jakiej dlugoœci s¹ klucze uznawane za bezpieczne?
+Jak¹ moc maj¹ algorytmy?
+
+klucz publiczny s³u¿y do szyfrowania, a prywatny do deszyfrowania
+
+algorytm s³u¿y nie tylko do zachowania poufnoœci danych, ale tak¿e autentycznoœci nadawcy (podpis cyfrowy? coœ tam)
+
+gdy chcemy sprawdziæ autentycznoœæ to u¿ywamy klucza prywatnego do szyfrowania (tylko w³aœciwy nadawca mo¿e zaszyfrowaæ tekst)
+
+zmiana d³ugoœci klucza o jedn¹ pozycjê jak du¿o zmienia?
+
+logarytm dyskretny = wartoœci i argumenty pochodz¹/nale¿a do ograniczonego zakresu wartoœci
+
+asymetryczne algorytmy wymagaj¹ du¿ych mocy obliczeniowych (du¿o czasu zajmuje, szcególnie deszyfracja)
