@@ -14,7 +14,7 @@
     float:left; 
 } 
 .file_last_updated_header, .file_last_updated { 
-    width:150px; 
+    width:120px; 
     float:left; 
 } 
 .file_download { 
@@ -41,4 +41,9 @@
     text-decoration:none; 
     color:#1D96EF; 
     font-size:12px; 
+}
+
+.description{
+  width: 500px;
+  height: 10em !important;
 }

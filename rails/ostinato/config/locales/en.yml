@@ -16,6 +16,7 @@ en:
   rights: All rigths reserved
   back: Back
   show: Show
+  save: Save
 
   edit: Edit
   delete: Delete
@@ -48,6 +49,14 @@ en:
     post_updated: Post was successfully updated.
     post_deleted: Post was successfully deleted.
 
+  files:
+    browse: Browse...
+    new_file: New file
+    no_files: No files to show
+    file_name: File name
+    size: Size
+    updated: Modified
+
   activerecord:
     models:
       user: User
@@ -68,7 +77,8 @@ en:
         show: Show
         edit: Edit
         destroy: Destroy
-        errors:
+      file_resource:
+        description: Descrition
       models:
         user:
           attributes:
