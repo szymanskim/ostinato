@@ -35,9 +35,22 @@
     </tbody>
   </table>
 
-  <i class="fa fa-plus" aria-hidden="true">
-    <div class="button-new-user">
-    <%= link_to 'New User', new_user_path %>
-    </div>
-  </i>
-</div>
+<i class="fa fa-plus" aria-hidden="true">
+  <div class="button-new-user">
+  <%= link_to 'New User', new_user_path %>
+  </div>
+  <button id="run">AJAX</button>
+</i>
+    
+<script type="text/javascript">
+  $( "#run" ).click(function() {
+    var root = 'https://jsonplaceholder.typicode.com';
+
+    $.ajax({
+      url: root + '/posts/1',
+      method: 'GET'
+    }).then(function(data) {
+    console.log(data);
+  });
+});
+</script>
