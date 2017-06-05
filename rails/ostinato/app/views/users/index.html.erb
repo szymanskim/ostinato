@@ -28,7 +28,7 @@
         <td><%= user.description %></td>
         <td class="button-show"><i class="fa fa-eye" aria-hidden="true"></i> <%= link_to 'Show', user %></td> 
         <td class="button-edit"><i class="fa fa-pencil" aria-hidden="true"></i> <%= link_to 'Edit', edit_user_path(user) %></td>
-        <td class="button-destroy"><i class="fa fa-trash-o" aria-hidden="true"></i> <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="button-destroy"><i class="fa fa-trash-o" aria-hidden="true"></i> <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?'} %> </td>
       </tr>
     <% end %>
   </tbody>
@@ -38,4 +38,18 @@
   <div class="button-new-user">
   <%= link_to 'New User', new_user_path %>
   </div>
+  <button id="run">AJAX</button>
 </i>
+    
+<script type="text/javascript">
+  $( "#run" ).click(function() {
+    var root = 'https://jsonplaceholder.typicode.com';
+
+    $.ajax({
+      url: root + '/posts/1',
+      method: 'GET'
+    }).then(function(data) {
+    console.log(data);
+  });
+});
+</script>
