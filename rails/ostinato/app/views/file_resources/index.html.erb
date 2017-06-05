@@ -1,0 +1,28 @@
+<div class="form-container">
+  <%= link_to I18n.t('files.new_file'), new_file_resource_path, class: "btn btn-primary btn-sm" %>
+  <br/>
+  <br/>
+
+  <% if @files.count == 0 %>
+  <h4> <%= I18n.t('files.no_files') %> </h4>
+  <% else %>
+      <div class="asset_list_header"> 
+         <div class="file_name_header"><%= I18n.t('files.file_name') %></div> 
+         <div class="file_size_header"><%= I18n.t('files.size') %> </div> 
+         <div class="file_last_updated_header"><%= I18n.t('files.updated') %> </div> 
+      </div>
+  <% end %>
+
+   
+     <div class="asset_list"> 
+        <% @files.each do |file| %> 
+             <div class="asset_details"> 
+                 <div class="file_name"><%= File.basename(file.attachment.path)%></div> 
+                 <div class="file_size"><%= Filesize.from(Filesize.from("#{file.attachment.size} B").to_f('KB').to_s + "KB").pretty %></div> 
+                 <div class="file_last_updated"><%= file.updated_at.strftime("%d.%m.%Y %H:%M") %></div> 
+                 <div class="file_download"><%= link_to "Download", file_resources_download_path(id: file.id) %></div>
+                 <div class="file_delete"><%= button_to "Delete",  file, method: :delete, class: "btn btn-danger btn-xs", confirm: "Are you sure that you wish to delete #{File.basename(file.attachment.path)}?" %></div> 
+             </div> 
+        <% end %> 
+  </div>
+</div>

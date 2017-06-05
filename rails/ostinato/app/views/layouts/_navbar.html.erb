@@ -20,6 +20,9 @@
                 <% if user_signed_in? %>
                 <li><%= link_to I18n.t('topics_tab'), topics_path %> </li>  
                 <% end %>
+                <% if user_signed_in? %>
+                <li><%= link_to I18n.t('files_tab'), file_resources_path %> </li>  
+                <% end %>
             </ul>
         </div>
     </div>

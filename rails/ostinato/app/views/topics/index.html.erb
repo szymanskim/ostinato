@@ -19,7 +19,11 @@
         <%= link_to 'Edit', edit_topic_path(topic), class: 'btn btn-warning btn-xs' %>
         <%= link_to 'Delete', topic, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' %>
         <% end %>
-        <h3> <%= link_to topic.codename,  topic_posts_path(topic) %> </h3>
+        <h3> <% if topic.public %>
+                <% p = "[P]" else p = "" %>
+              <% end %>
+              <%= link_to topic.codename + p,  topic_posts_path(topic) %> 
+        </h3>
       </div>
       <% if topic.posts.any? %>
         <div class="col-md-9">

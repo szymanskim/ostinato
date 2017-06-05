@@ -5,6 +5,7 @@ pl:
   contact: KONTAKT
   admin_users: UŻYTKOWNICY
   topics_tab: TABLICE
+  files_tab: PLIKI
   about_us: O zespole
   registration: Rejestracja
   login: Zaloguj się
@@ -15,6 +16,7 @@ pl:
   rights: Wszelkie prawa zastrzeżone
   back: Powrót
   show: Pokaż
+  save: Zapisz
 
   edit: Edytuj
   delete: Usuń
@@ -47,6 +49,14 @@ pl:
     post_updated: Post pomyślnie zaktualizowany.
     post_deleted: Post został pomyślnie usunięty.
 
+  files:
+    browse: Przeglądaj...
+    new_file: Nowy plik
+    no_files: Brak plików do wyświetlenia
+    file_name: Nazwa pliku 
+    size: Rozmiar
+    updated: Dodany
+
   activerecord:
     models:
       user: Użytkownik
@@ -68,6 +78,8 @@ pl:
         show: Pokaż
         edit: Edytuj
         destroy: Usuń
+      file_resource:
+        description: Opis
       post:
         title: Tytuł
         content: Treść posta
