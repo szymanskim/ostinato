@@ -13,7 +13,7 @@
     <div class="form-group">
       <%= f.label :attachment, class: "btn btn-default btn-file" do %>
       <%= I18n.t('files.browse') %>
-      <%= f.file_field :attachment %>
+      <%= f.file_field :attachment, :required => 'required'%>
       <%end %>
     </div>
     <div class="form-group">

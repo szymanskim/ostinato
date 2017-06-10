@@ -16,7 +16,11 @@
 .file_last_updated_header, .file_last_updated { 
     width:120px; 
     float:left; 
-} 
+}
+.file_author_header, .file_author { 
+    width:120px; 
+    float:left; 
+}
 .file_download { 
     width:75px; 
     float:left; 
@@ -33,7 +37,7 @@
     height:25px; 
     line-height:25px; 
     border:1px solid #FFF; 
-    width:800px; 
+    width:900px; 
     color:#4F4F4F; 
 } 
   
