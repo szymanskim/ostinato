@@ -59,6 +59,7 @@ en:
     download: Download
     delete: Delete
     author: Author
+    only_author: Function available only for author or admin
 
   activerecord:
     models:

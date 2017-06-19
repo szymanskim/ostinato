@@ -1,6 +1,6 @@
 class FileResourcesController < ApplicationController
   before_action :authenticate_user!
-  before_action :authenticate_admin!, only: %i[destroy]
+  before_action :authenticate_author!, only: %i[destroy]
 
   def index
     @files = FileResource.all
@@ -37,5 +37,14 @@ class FileResourcesController < ApplicationController
 
   def file_params
     params.require(:file_resource).permit(:attachment, :description)
+  end
+
+  def authenticate_author!
+    authenticate_user!
+    @file = FileResource.find(params[:id])
+    unless current_user.id == @file.user.id || current_user.is_admin?
+      flash[:alert] = I18n.t('files.only_author')
+      redirect_to root_path
+    end
   end
 end

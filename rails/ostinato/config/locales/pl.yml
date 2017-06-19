@@ -59,6 +59,7 @@ pl:
     download: Pobierz
     delete: Usuń
     author: Autor
+    only_author: Usunąć plik może tylko autor pliku albo administrator
 
   activerecord:
     models:
