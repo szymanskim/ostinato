@@ -1,6 +1,8 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-10 col-sm-8 col-md-5 content paddingRemove">
+            <%= link_to 'Edit', edit_user_path(@user), class: "btn btn-warning btn-xs"  %>
+            <%= link_to 'Back', users_path, class: "btn btn-info btn-xs"  %>
             <div class="well well-sm">
                 <div class="row"> 
                     <div class="col-sm-8 col-md-10">
@@ -18,9 +20,4 @@
             </div>
         </div>
     </div>
-</div>
-
-<div class="link-carrier">
-  <%= link_to 'Edit', edit_user_path(@user) %> |
-  <%= link_to 'Back', users_path %>
 </div>

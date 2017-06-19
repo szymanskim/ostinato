@@ -18,14 +18,14 @@ hr{
   color: black;
 }
 
-.checkbox label:after, 
+.checkbox_t label:after, 
 .radio label:after {
     content: '';
     display: table;
     clear: both;
 }
 
-.checkbox .cr,
+.checkbox_t .cr,
 .radio .cr {
     position: relative;
     display: inline-block;
@@ -41,7 +41,7 @@ hr{
     border-radius: 50%;
 }
 
-.checkbox .cr .cr-icon,
+.checkbox_t .cr .cr-icon,
 .radio .cr .cr-icon {
     position: absolute;
     font-size: .8em;
@@ -54,25 +54,25 @@ hr{
     margin-left: 0.04em;
 }
 
-.checkbox label input[type="checkbox"],
+.checkbox_t label input[type="checkbox"],
 .radio label input[type="radio"] {
     display: none;
 }
 
-.checkbox label input[type="checkbox"] + .cr > .cr-icon,
+.checkbox_t label input[type="checkbox"] + .cr > .cr-icon,
 .radio label input[type="radio"] + .cr > .cr-icon {
     transform: scale(3) rotateZ(-20deg);
     opacity: 0;
     transition: all .3s ease-in;
 }
 
-.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon,
+.checkbox_t label input[type="checkbox"]:checked + .cr > .cr-icon,
 .radio label input[type="radio"]:checked + .cr > .cr-icon {
     transform: scale(1) rotateZ(0deg);
     opacity: 1;
 }
 
-.checkbox label input[type="checkbox"]:disabled + .cr,
+.checkbox_t label input[type="checkbox"]:disabled + .cr,
 .radio label input[type="radio"]:disabled + .cr {
     opacity: .5;
 }
